@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+
+
+
+	<servlet>
+        <servlet-name>SignUp</servlet-name>
+        <servlet-class>SignUp</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <servlet-class>SignIn</servlet-class>
+    </servlet>
+        <servlet>
+        <servlet-name>AddEventServlet</servlet-name>
+        <servlet-class>com.robolux.controller.AddEventServlet</servlet-class>
+    </servlet>
+    <servlet>
+    <servlet-name>GetAllEventsServlet</servlet-name>
+    <servlet-class>com.robolux.controller.GetAllEventsServlet</servlet-class>
+</servlet>
+ <servlet>
+        <servlet-name>UpdateEventServlet</servlet-name>
+        <servlet-class>com.robolux.controller.UpdateEventServlet</servlet-class>
+    </servlet>
+     <servlet>
+        <servlet-name>DeleteEventServlet</servlet-name>
+        <servlet-class>com.robolux.controller.DeleteEventServlet</servlet-class>
+    </servlet>
+    <servlet>
+     <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>com.robolux.controller.LogoutServlet</servlet-class>
+    </servlet>
+ 
+    
+    
+      <servlet>
+        <servlet-name>RegisterEventServlet</servlet-name>
+        <servlet-class>com.robolux.controller.RegisterEventServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RegisterEventServlet</servlet-name>
+        <url-pattern>/registerEventServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/SignIn</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddEventServlet</servlet-name>
+        <url-pattern>/addEvent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>GetAllEventsServlet</servlet-name>
+    <url-pattern>/allevents</url-pattern>
+</servlet-mapping>
+  <servlet-mapping>
+        <servlet-name>UpdateEventServlet</servlet-name>
+        <url-pattern>/updateevent</url-pattern>
+    </servlet-mapping>
+     <servlet-mapping>
+        <servlet-name>DeleteEventServlet</servlet-name>
+        <url-pattern>/deleteevent</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    
+    
+    
+    
+     <filter>
+        <filter-name>RoleFilter</filter-name>
+        <filter-class>RoleFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>RoleFilter</filter-name>
+        <url-pattern>/adminhomepage.jsp</url-pattern>
+        <!-- Add more protected URLs here if necessary -->
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RoleFilter</filter-name>
+        <url-pattern>/regularuser.html</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>RoleFilter</filter-name>
+        <url-pattern>/addevent.jsp</url-pattern>
+    </filter-mapping>
+    
+</web-app>
